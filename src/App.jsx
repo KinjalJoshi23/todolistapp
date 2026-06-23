@@ -54,60 +54,64 @@ useEffect(() => {
     <>
    <Navbar />
 
-     <div className='h-[85vh] w-[80vw] border bg-cyan-400 border-cyan-400 mt-5 ml-35 p-5 rounded-md'>
+     <div className='min-h-[85vh] w-[95%] sm:w-[90%] md:w-[80vw] border bg-cyan-400 border-cyan-400 mt-5 mx-auto p-3 sm:p-5 rounded-md'>
         <h2 className='font-bold text-[20px] text-white text-center mb-4'>Add To Do</h2>
-        <div className='flex justify-center gap-5'>
-            <input 
-            type="text" 
+        <div className='flex flex-col sm:flex-row justify-center gap-3 sm:gap-5'>
+            <input
+            type="text"
   placeholder='Type your to do here...'
   value={todo}
   onChange={handleChange}
-  className='focus:outline-none w-[80%] h-12 border border-cyan-100 rounded-md px-2.5 py-3 bg-cyan-50 text-black'
+  className='focus:outline-none w-full sm:w-[80%] h-12 border border-cyan-100 rounded-md px-2.5 py-3 bg-cyan-50 text-black'
 />
             <button onClick={handleAdd}
-            className='hover:bg-cyan-200 cursor-pointer w-25 h-12 border border-cyan-100 rounded-md  bg-cyan-50 text-black transition-all duration-300'>Add</button>
+            className='hover:bg-cyan-200 cursor-pointer w-full sm:w-25 h-12 border border-cyan-100 rounded-md  bg-cyan-50 text-black transition-all duration-300'>Add</button>
         </div>
         <div>
         <h2 className='font-bold text-[20px] text-white text-center mb-4 mt-4'>Your To Do</h2>
         <div className='flex flex-col items-center gap-5'>
       {todos.map((item, index) => {
   return (
-    <div key={index} className="flex items-center gap-3">
+    <div key={index} className="flex flex-col sm:flex-row items-center gap-3 w-full">
 
-      <input
-        type="checkbox"
-        checked={item.isCompleted}
-        onChange={() => toggleComplete(index)}
-      />
+      <div className="flex items-center gap-3 w-full sm:flex-1 sm:min-w-0">
+        <input
+          type="checkbox"
+          checked={item.isCompleted}
+          onChange={() => toggleComplete(index)}
+        />
 
-     <div
-  className={`rounded-md border border-cyan-100 bg-cyan-100 
-  w-180 min-h-12 px-3 py-2 wrap-break-word ${
-    item.isCompleted ? "line-through opacity-50" : ""
-  }`}
->
-  {item.todo}
-</div>
+        <div
+          className={`rounded-md border border-cyan-100 bg-cyan-100
+          flex-1 min-w-0 min-h-12 px-3 py-2 wrap-break-word ${
+            item.isCompleted ? "line-through opacity-50" : ""
+          }`}
+        >
+          {item.todo}
+        </div>
+      </div>
 
-      <button
-        onClick={() => handleEdit(index)}
-        className='hover:bg-cyan-300 cursor-pointer w-28 h-12 border border-cyan-300 rounded-md bg-cyan-50 text-black transition-all duration-300'
-      >
-        Edit
-      </button>
+      <div className="flex gap-3 w-full sm:w-auto">
+        <button
+          onClick={() => handleEdit(index)}
+          className='hover:bg-cyan-300 cursor-pointer w-full sm:w-28 h-12 border border-cyan-300 rounded-md bg-cyan-50 text-black transition-all duration-300'
+        >
+          Edit
+        </button>
 
-      <button
-        onClick={() => handleDelete(index)}
-        className='hover:bg-red-600 cursor-pointer w-28 h-12 border border-red-500 rounded-md bg-red-500 text-white transition-all duration-300'
-      >
-        Delete
-      </button>
+        <button
+          onClick={() => handleDelete(index)}
+          className='hover:bg-red-600 cursor-pointer w-full sm:w-28 h-12 border border-red-500 rounded-md bg-red-500 text-white transition-all duration-300'
+        >
+          Delete
+        </button>
+      </div>
 
     </div>
   );
 })}
 </div>
-         
+
         </div>
     </div>
      
