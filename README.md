@@ -32,13 +32,13 @@ The app runs at `http://localhost:5173` by default.
 
 ## Scripts
 
-| Command | Description |
-|---|---|
-| `npm run dev` | Start development server |
-| `npm run build` | Build for production |
+| Command             | Description                      |
+| ------------------- | -------------------------------- |
+| `npm run dev`     | Start development server         |
+| `npm run build`   | Build for production             |
 | `npm run preview` | Preview production build locally |
-| `npm run lint` | Run ESLint |
-| `npm run deploy` | Deploy to GitHub Pages |
+| `npm run lint`    | Run ESLint                       |
+| `npm run deploy`  | Deploy to GitHub Pages           |
 
 ## Deployment
 
@@ -60,4 +60,4 @@ src/
 
 ## Live Demo
 
-(https://todoapp-jade-seven.vercel.app/)
+https://todoapp-jade-seven.vercel.app/
