@@ -60,4 +60,4 @@ src/
 
 ## Live Demo
 
-[https://kinjaljoshi23.github.io/todolistapp](https://kinjaljoshi23.github.io/todolistapp)
+(https://todoapp-jade-seven.vercel.app/)
