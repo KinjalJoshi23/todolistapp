@@ -42,11 +42,12 @@ The app runs at `http://localhost:5173` by default.
 
 ## Deployment
 
-This project is configured for [GitHub Pages](https://pages.github.com/) via `gh-pages`.
+This project is deployed on [Vercel](https://vercel.com/). To deploy your own copy:
 
-```bash
-npm run deploy
-```
+1. Push the project to a GitHub repository.
+2. Import the repo on [vercel.com/new](https://vercel.com/new).
+3. Vercel auto-detects Vite — no extra configuration needed.
+4. Every push to `main` triggers an automatic redeploy.
 
 ## Project Structure
 
